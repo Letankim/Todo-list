@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 100vh;
+    width: 100%;
+    background: url(https://previews.123rf.com/images/sanek13744/sanek137441712/sanek13744171200459/92330418-to-do-list-seamless-pattern-background-business-flat-vector-illustration-checklist-task-list-symbol-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+.header {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script';
+}
+.cart__todo {
+    margin-top: 20px;
+    width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.cart__add {
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 8px 5px;
+    display: flex;
+}
+.cart__add-input {
+    flex: 1;
+    height: 100%;
+    padding: 10px 7px;
+    font-size: 16px;
+    height: 100%;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+.btn {
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: rgb(248, 141, 10);
+}
+.cart__todo-list {
+   list-style: none;
+   box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.5);
+   overflow-y: scroll;
+   max-height: 620px;
+}
+.cart__todo-list li {
+   position: relative;
+   width: 100%;
+   border-top: 1px solid #e5e5e5;
+   padding: 12px 10px;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+}
+.cart__todo-list li:hover {
+    background-color: rgb(250, 243, 243);
+}
+
+.cart__todo-list li.completed  .todo-value {
+    color: #aaa;
+    text-decoration: line-through;
+}
+.cart__todo-list li.completed  .todo-time {
+    color: #aaa;
+}
+
+.cart__todo-list li .infor-todo {
+   width: 100%;
+   font-family: 'Patrick Hand';
+   display: flex;
+   flex-direction: column;
+}
+.cart__todo-list li .todo-value {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    max-width: 330px;
+    max-height: 18px;
+}
+.cart__todo-list li .todo-time {
+    font-size: 12px;
+    margin-left: 0px;
+}
+
+.cart__todo-list li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.cart__todo-remove {
+   position: absolute;
+   text-decoration: none;
+   right: 15px;
+   color: #aaa;
+   display: none;
+   cursor: pointer;
+}
+
+.cart__todo-list li:hover .cart__todo-remove {
+    display: flex;
+}
+

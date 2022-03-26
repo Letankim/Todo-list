@@ -1,0 +1,14 @@
+@media (max-width: 740px){
+    .wrapper {
+        padding: 0px 20px;
+    }
+    .cart__todo {
+        width: 100%;
+    }
+    .cart__todo-list {
+        max-height: 470px;
+    }
+    .cart__todo-remove {
+        display: flex;
+    }
+}
