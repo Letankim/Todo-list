@@ -2,19 +2,23 @@ var input = document.querySelector('.cart__add-input');
 var btnAdd = document.querySelector('.btn');
 var listTodo = document.querySelector('.cart__todo-list');
 var isError = false;
+var data = 0;
 // add todo 
 function addToDo() {
     btnAdd.addEventListener('click', function(e) {
         let val = input.value.trim();
         if(val) {
         // check todo list has existed? if existed change isError = true;
-            isError = checkValueTodo(val);
+            if (data == 1) {
+                isError = checkValueTodo(val);
+            }
             var timeTodo = new Date().toLocaleString();
             if(!isError) {
                 showToDoList({
                     text: val,
                     time: timeTodo
                 });
+                data = 1;
             };
             saveToDoList();
         };
@@ -25,19 +29,25 @@ function addToDo() {
             let val = input.value.trim();
             if(val) {
         // check todo list has existed? if existed change isError = true;
+            if (data === 1) {
                 isError = checkValueTodo(val);
+                console.log(data)
+            }
                 var timeTodo = new Date().toLocaleString();
                 if(!isError) {
                     showToDoList({
                         text: val,
                         time: timeTodo
                     });
+                    data = 1;
+                    console.log(data)
                 };
                 saveToDoList();
             };
             input.value = '';
         };
     });
+    showOldTodo();
 };
 // show todo new
 function showToDoList(todo) {
@@ -65,8 +75,6 @@ function showToDoList(todo) {
     listTodo.appendChild(li);
 };
 addToDo();
-showOldTodo();
-saveToDoList();
 // save todo list
 function saveToDoList() {
     let eles = document.querySelectorAll('li');
